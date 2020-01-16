@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Database View Controller-->
+        <scene sceneID="n2G-eH-DQr">
+            <objects>
+                <viewController storyboardIdentifier="DatabaseViewController" id="rlK-Ta-fOZ" customClass="DatabaseViewController" customModule="CountryFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5CH-HN-oKk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cle-Kt-f8h">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cle-Kt-f8h" firstAttribute="top" secondItem="ExH-7N-r9l" secondAttribute="top" id="70a-v1-yUs"/>
+                            <constraint firstItem="cle-Kt-f8h" firstAttribute="bottom" secondItem="ExH-7N-r9l" secondAttribute="bottom" id="agi-Ad-lHz"/>
+                            <constraint firstItem="cle-Kt-f8h" firstAttribute="leading" secondItem="ExH-7N-r9l" secondAttribute="leading" id="pa4-pj-hcg"/>
+                            <constraint firstAttribute="trailing" secondItem="cle-Kt-f8h" secondAttribute="trailing" id="tuw-NL-WZE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ExH-7N-r9l"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cle-Kt-f8h" id="txv-SW-etO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPk-OR-SnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679.2" y="140.39408866995075"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="IEa-mZ-aTA">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="3cL-fc-FBY" customClass="SearchViewController" customModule="CountryFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qUs-6r-Csb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="se6-Up-aqL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="se6-Up-aqL" firstAttribute="bottom" secondItem="kS8-HP-hid" secondAttribute="bottom" id="Jsg-aW-htr"/>
+                            <constraint firstItem="se6-Up-aqL" firstAttribute="top" secondItem="kS8-HP-hid" secondAttribute="top" id="NdT-ja-e5l"/>
+                            <constraint firstAttribute="trailing" secondItem="se6-Up-aqL" secondAttribute="trailing" id="PGV-aJ-IhX"/>
+                            <constraint firstItem="se6-Up-aqL" firstAttribute="leading" secondItem="kS8-HP-hid" secondAttribute="leading" id="lB0-Bw-DP0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kS8-HP-hid"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="se6-Up-aqL" id="QWG-bc-wsi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xSp-L5-gzt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="140"/>
+        </scene>
+    </scenes>
+</document>

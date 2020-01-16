@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="alphaCode" attributeType="String" syncable="YES"/>
+        <attribute name="borders" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
+        <attribute name="coordinates" attributeType="Transformable" customClassName="[Double]" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="nativeName" attributeType="String" syncable="YES"/>
+        <attribute name="region" attributeType="String" syncable="YES"/>
+        <relationship name="currencies" toMany="YES" deletionRule="Nullify" destinationEntity="Currency" inverseName="country" inverseEntity="Currency" syncable="YES"/>
+        <relationship name="languages" toMany="YES" deletionRule="Nullify" destinationEntity="Language" inverseName="country" inverseEntity="Language" syncable="YES"/>
+    </entity>
+    <entity name="Currency" representedClassName="Currency" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="country" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="currencies" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <entity name="Language" representedClassName="Language" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="country" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="languages" inverseEntity="Country" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Country" positionX="-53.3359375" positionY="-224.4375" width="95.4140625" height="163"/>
+        <element name="Currency" positionX="81.640625" positionY="-190.859375" width="88.60546875" height="73"/>
+        <element name="Language" positionX="-191.87890625" positionY="-189.0078125" width="90.8515625" height="73"/>
+    </elements>
+</model>
